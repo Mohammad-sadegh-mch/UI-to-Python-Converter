@@ -20,6 +20,7 @@ class UiForm(object):
     def setupUi(self, Form:QDialog):
         " setup Ui Program and set Setting "
         Form.setObjectName("Form")
+        Form.setWindowTitle("Ui to Python Converter")
         Form.setEnabled(True)
         Form.setFixedSize(500, 160)
         self.font.setPointSize(10)
@@ -51,9 +52,8 @@ class UiForm(object):
         QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form:QDialog):
-        Form.setWindowTitle(self.translate("Form", "Form"))
         self.label.setText(self.translate("Form", "Enter File .ui to Convert Python Files:"))
-        self.browser.setText(self.translate("Form", "Browser"))
+        self.browser.setText(self.translate("Form", "Browse"))
 
 class ApplicationClass(QDialog):
     def __init__(self):
